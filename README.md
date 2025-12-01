@@ -1,1 +1,1 @@
-# Voter-Hub
+VoterHub is a secure and modern Android Voting App that allows Admin to create clubs, add positions & candidates, and conduct voting with a live synchronized timer. Votes are stored date-wise to avoid data mix-up, and the system tracks hosted voting events instead of total clubs. Voters can vote only once per session, and all voting buttons auto-disable when the timer is stopped by Admin. The dashboard shows real-time club count, visitors, votes, and activity logs in an italic-styled interface for better UI experience.
