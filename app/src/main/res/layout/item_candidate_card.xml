@@ -1,0 +1,60 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="10dp"
+    android:background="@drawable/white_card"
+    android:layout_marginBottom="10dp"
+    android:elevation="3dp"
+    android:gravity="center_vertical">
+
+    <ImageView
+        android:id="@+id/imgCandidate"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:clipToOutline="true"
+        android:scaleType="centerCrop"
+        android:background="@drawable/round_border"
+        android:layout_marginEnd="12dp" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:layout_gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/tvCandidateName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Riya Sharma"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#222222"
+            android:maxLines="1"
+            android:ellipsize="end" />
+
+        <TextView
+            android:id="@+id/tvCandidateBrief"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Committed to tech innovation"
+            android:textSize="14sp"
+            android:textColor="#666666"
+            android:layout_marginTop="4dp"
+            android:maxLines="2"
+            android:ellipsize="end" />
+
+        <TextView
+            android:id="@+id/tvVotes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Votes: 0"
+            android:textSize="13sp"
+            android:textColor="#5A74FD"
+            android:layout_marginTop="6dp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+</LinearLayout>

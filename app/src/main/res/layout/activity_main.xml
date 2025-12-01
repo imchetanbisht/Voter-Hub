@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:backgroundTint="#1F3FF8"
+    android:gravity="center"
+    android:background="#121212"
+    tools:context=".MainActivity">
+
+    <!-- App Logo -->
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:src="@drawable/baseline_vote_24"
+        android:contentDescription="App Logo"
+        android:layout_marginBottom="24dp" />
+
+    <!-- App Name -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-black"
+        android:text="VoterHub"
+        android:textColor="#FFFFFF"
+        android:textSize="42sp"
+        android:textStyle="bold" />
+
+    <!-- Tagline -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Empowering Digital Elections"
+        android:textColor="#AFAFAF"
+        android:textSize="16sp"
+        android:layout_marginTop="8dp" />
+
+</LinearLayout>

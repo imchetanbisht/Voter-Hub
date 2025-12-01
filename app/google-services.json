@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "167801685647",
+    "project_id": "voterhub-255f1",
+    "storage_bucket": "voterhub-255f1.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:167801685647:android:c6784f5012cf57eed2d2fa",
+        "android_client_info": {
+          "package_name": "com.example.voterhub"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCKMDiPSutfvFacOkeTXU1_Rd4GcH8fEsI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mainVoterDashboard"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#EEF1F6">
+
+    <!-- 🔵 PREMIUM HEADER OUTSIDE SCROLLVIEW -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:background="@drawable/gradient_header"
+        android:orientation="horizontal"
+        android:paddingHorizontal="16dp"
+        android:gravity="center_vertical"
+        android:elevation="8dp"
+        android:descendantFocusability="blocksDescendants">
+
+        <ImageView
+            android:id="@+id/btnHeaderBack"
+            android:layout_width="49dp"
+            android:layout_height="49dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:padding="6dp"
+            android:src="@drawable/arrow" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Voter Dashboard"
+            android:textColor="#FFFFFF"
+            android:textSize="29sp"
+            android:textStyle="bold"
+            android:gravity="center" />
+
+        <View
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:visibility="invisible" />
+    </LinearLayout>
+
+    <!-- SCROLLABLE CONTENT -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:paddingBottom="60dp"
+        android:clipToPadding="false"> <!-- ⭐ CONTENT WON'T BE CUT -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- 🟣 PREMIUM WELCOME CARD -->
+        <!-- 🟣 PREMIUM WELCOME CARD -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/welcome_card_bg"
+            android:padding="18dp"
+            android:layout_margin="14dp"
+            android:elevation="5dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:clipToOutline="true">
+
+            <!-- LEFT SIDE TEXT -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/tvWelcome"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Hi User 👋"
+                    android:textColor="#FFFFFF"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Welcome to the secure voting system"
+                    android:textColor="#f2f2f2"
+                    android:textSize="15sp"
+                    android:layout_marginTop="4dp" />
+            </LinearLayout>
+
+            <!-- RIGHT SIDE SIGN OUT BUTTON -->
+            <Button
+                android:id="@+id/btnSignOut"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:text="Sign Out"
+                android:layout_marginBottom="10dp"
+                android:textAllCaps="false"
+                android:paddingHorizontal="14dp"
+                android:textSize="14sp"
+                android:backgroundTint="#D32F2F"
+                android:textColor="#FFFFFF"
+                android:elevation="4dp" />
+
+        </LinearLayout>
+
+
+        <!-- 🟢 GLASS TIMER CARD -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:background="@drawable/glass_card_bg"
+            android:layout_marginHorizontal="17dp"
+            android:elevation="4dp"
+            android:padding="14dp"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Voting Ends In"
+                android:textSize="15sp"
+                android:textColor="#444" />
+
+            <TextView
+                android:id="@+id/tvTimerVoter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="00:00:00"
+                android:textColor="#4454FF"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:layout_marginTop="4dp" />
+        </LinearLayout>
+
+        <!-- HEADING -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Active Elections"
+            android:textColor="#111"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:paddingHorizontal="18dp"
+            android:paddingTop="18dp" />
+
+        <!-- CLUB LIST -->
+        <LinearLayout
+            android:id="@+id/layoutVoterClubs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="14dp"
+            android:paddingBottom="150dp" />
+    </LinearLayout>
+</ScrollView>
+
+    </LinearLayout>

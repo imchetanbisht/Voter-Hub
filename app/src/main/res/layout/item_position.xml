@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="12dp"
+    android:padding="14dp"
+    android:background="@drawable/candidate_card_bg"
+    android:elevation="4dp">
+
+    <!-- Position Header -->
+    <TextView
+        android:id="@+id/tvPositionTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Position Details"
+        android:textColor="#333333"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="8dp" />
+
+    <!-- Position Name -->
+    <EditText
+        android:id="@+id/etPositionName"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:hint="Enter Position Name (e.g., President)"
+        android:padding="12dp"
+        android:textColor="#000000"
+        android:textSize="15sp"
+        android:background="@drawable/edittext_bg" />
+
+    <!-- Add Candidate Button -->
+    <Button
+        android:id="@+id/btnAddCandidate"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:text="➕ Add Candidate"
+        android:textSize="15sp"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#5A74FD"
+        android:elevation="2dp"
+        android:layout_marginTop="10dp" />
+
+    <!-- Divider -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="12dp"
+        android:background="#E0E0E0" />
+
+    <!-- Candidate List -->
+    <LinearLayout
+        android:id="@+id/layoutCandidates"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:divider="@android:color/darker_gray"
+        android:showDividers="middle"
+        android:dividerPadding="6dp" />
+
+</LinearLayout>

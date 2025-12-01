@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#ECEFF4"
+    android:padding="12dp">
+
+    <!-- Top Header -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@drawable/gradient_header"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="16dp"
+        android:elevation="10dp"
+        android:orientation="horizontal"
+        android:clipToPadding="false">
+
+        <ImageView
+            android:id="@+id/btnBack"
+            android:layout_width="53dp"
+            android:layout_height="53dp"
+            android:src="@drawable/arrow"
+            android:padding="6dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Back" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Declared Results"
+            android:textColor="#FFFFFF"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:gravity="center" />
+
+        <View
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:visibility="invisible"/>
+    </LinearLayout>
+
+    <!-- Spinner Wrapper -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:gravity="center"
+        android:padding="8dp"
+        android:layout_marginTop="18dp"
+        android:background="@drawable/glass_card_bg"
+        android:elevation="6dp"
+        android:clipToOutline="true">
+
+        <Spinner
+            android:id="@+id/spinnerClubs"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:padding="10dp"
+            android:textAlignment="center"
+            android:background="@drawable/spinner_bg"
+            android:spinnerMode="dropdown" />
+    </LinearLayout>
+
+    <!-- Results Section -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="14dp"
+        android:fillViewport="true"
+        android:paddingBottom="70dp"
+        android:clipToPadding="false"
+        android:fadingEdgeLength="40dp"
+        android:requiresFadingEdge="vertical">
+
+        <LinearLayout
+            android:id="@+id/layoutResults"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+    </ScrollView>
+
+</LinearLayout>

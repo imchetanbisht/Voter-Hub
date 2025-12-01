@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mainLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="#F0F2F5"
+    android:fitsSystemWindows="true"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- 🔹 Header -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:orientation="horizontal"
+            android:background="@drawable/gradient_header"
+            android:gravity="center_vertical"
+            android:paddingHorizontal="14dp"
+            android:elevation="6dp"
+            android:layout_marginBottom="20dp">
+
+            <ImageView
+                android:id="@+id/btnBack"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:src="@drawable/arrow"
+                android:contentDescription="Back"
+                android:layout_marginEnd="8dp" />
+
+            <TextView
+                android:id="@+id/tvHeader"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Create New Club"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:gravity="center" />
+
+            <View
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:visibility="invisible" />
+        </LinearLayout>
+
+        <!-- Club Name -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Club Name"
+            android:textColor="#444"
+            android:textSize="15sp"
+            android:layout_marginBottom="6dp" />
+
+        <EditText
+            android:id="@+id/etClubName"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="Enter Club Name"
+            android:background="@drawable/edittext_bg"
+            android:padding="12dp"
+            android:textColor="#000"
+            android:textSize="16sp"/>
+
+        <!-- Club Description -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Club Description"
+            android:textColor="#444"
+            android:textSize="15sp"
+            android:layout_marginTop="14dp"
+            android:layout_marginBottom="6dp" />
+
+        <EditText
+            android:id="@+id/etClubDescription"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:gravity="top"
+            android:hint="Enter Club Description"
+            android:background="@drawable/edittext_bg"
+            android:padding="12dp"
+            android:textColor="#000"
+            android:textSize="16sp"/>
+
+        <!-- Add Position -->
+        <Button
+            android:id="@+id/btnAddPosition"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="➕ Add Position"
+            android:textAllCaps="false"
+            android:textSize="16sp"
+            android:backgroundTint="#5A74FD"
+            android:textColor="#FFFFFF"
+            android:layout_marginTop="18dp"
+            android:elevation="3dp"/>
+
+        <!-- Dynamic Positions -->
+        <LinearLayout
+            android:id="@+id/layoutPositions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:orientation="vertical"/>
+
+        <!-- Buttons -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_marginTop="30dp">
+
+            <Button
+                android:id="@+id/btnSaveClub"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:text="💾 Save"
+                android:textAllCaps="false"
+                android:textSize="16sp"
+                android:backgroundTint="#4CAF50"
+                android:textColor="#fff"
+                android:elevation="3dp"/>
+
+            <Space
+                android:layout_width="16dp"
+                android:layout_height="wrap_content"/>
+
+            <Button
+                android:id="@+id/btnCancel"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:text="✖ Cancel"
+                android:textAllCaps="false"
+                android:textSize="16sp"
+                android:backgroundTint="#F44336"
+                android:textColor="#fff"
+                android:elevation="3dp"/>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="150dp"/>
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

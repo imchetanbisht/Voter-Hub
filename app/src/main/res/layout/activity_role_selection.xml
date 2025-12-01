@@ -1,0 +1,113 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="24dp"
+    android:background="#1F42FF">
+
+    <!-- Heading -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select Your Role"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/white"
+        android:fontFamily="sans-serif-medium"
+        android:layout_marginBottom="40dp"
+        android:letterSpacing="0.05"
+        android:shadowColor="#66000000"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="4" />
+
+    <!-- Card container -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:weightSum="2">
+
+        <!-- Admin Card -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardAdmin"
+            android:layout_width="0dp"
+            android:layout_height="200dp"
+            android:layout_weight="1"
+            android:layout_margin="12dp"
+            android:clickable="true"
+            android:foreground="?attr/selectableItemBackgroundBorderless"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="10dp"
+            app:cardBackgroundColor="@android:color/white">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/manager"
+                    android:contentDescription="Admin Icon"
+                    app:tint="#1F42FF" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Admin"
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+                    android:textColor="#1F42FF"
+                    android:layout_marginTop="12dp"
+                    android:fontFamily="sans-serif-medium" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Voter Card -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardVoter"
+            android:layout_width="0dp"
+            android:layout_height="200dp"
+            android:layout_weight="1"
+            android:layout_margin="12dp"
+            android:clickable="true"
+            android:foreground="?attr/selectableItemBackgroundBorderless"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="10dp"
+            app:cardBackgroundColor="@android:color/white">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/election"
+                    android:contentDescription="Voter Icon"
+                    app:tint="#1F42FF" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Voter"
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+                    android:textColor="#1F42FF"
+                    android:layout_marginTop="12dp"
+                    android:fontFamily="sans-serif-medium" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+
+</LinearLayout>

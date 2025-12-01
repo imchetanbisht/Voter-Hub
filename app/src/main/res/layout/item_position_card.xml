@@ -1,0 +1,31 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="#F7F9FC"
+    android:padding="12dp"
+    android:layout_marginTop="8dp"
+    android:layout_marginBottom="8dp"
+    android:layout_marginHorizontal="4dp"
+    android:elevation="3dp"
+    android:clipToOutline="true">
+
+    <TextView
+        android:id="@+id/tvPositionName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="President"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        android:textColor="#1E1E1E"
+        android:layout_marginBottom="10dp" />
+
+    <LinearLayout
+        android:id="@+id/layoutCandidates"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:divider="?android:attr/dividerHorizontal"
+        android:showDividers="middle" />
+
+</LinearLayout>

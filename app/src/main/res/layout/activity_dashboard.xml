@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F4F6FB"
+    tools:context=".DashboardActivity">
+
+    <!-- ================= HEADER BAR ================= -->
+    <RelativeLayout
+        android:id="@+id/headerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:background="@drawable/gradient_header"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:gravity="center_vertical"
+        android:elevation="10dp">
+
+        <!-- Back -->
+        <ImageView
+            android:id="@+id/btnHeaderBack"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/arrow"
+            android:padding="6dp"
+            android:layout_alignParentStart="true"/>
+
+        <!-- Welcome -->
+        <TextView
+            android:id="@+id/tvWelcome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hi Admin 👋"
+            android:textSize="26sp"
+            android:textColor="#FFF"
+            android:textStyle="bold"
+            android:layout_centerHorizontal="true"/>
+
+        <!-- Sign Out -->
+        <Button
+            android:id="@+id/btnSignOut"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:text="Sign Out"
+            android:textColor="#FFF"
+            android:backgroundTint="#D32F2F"
+            android:textAllCaps="false"
+            android:paddingHorizontal="14dp"
+            android:layout_alignParentEnd="true"/>
+    </RelativeLayout>
+
+
+    <!-- ================= TIMER CARD ================= -->
+    <LinearLayout
+        android:id="@+id/timerCard"
+        android:layout_width="match_parent"
+        android:layout_height="170dp"
+        android:layout_marginTop="130dp"
+        android:layout_marginHorizontal="18dp"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:gravity="center"
+        android:background="@drawable/glass_card_bg"
+        android:clipToOutline="true"
+        android:elevation="8dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Voting Timer"
+            android:textSize="16sp"
+            android:textColor="#333"/>
+
+        <TextView
+            android:id="@+id/tvTimer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="00:00:00"
+            android:textColor="#4454FF"
+            android:textSize="32sp"
+            android:textStyle="bold"
+            android:layout_marginTop="4dp"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="14dp">
+
+            <Button
+                android:id="@+id/btnSetTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Set"
+                android:backgroundTint="#2196F3"
+                android:textColor="#FFF"
+                android:textAllCaps="false"
+                android:layout_marginEnd="8dp"/>
+
+            <Button
+                android:id="@+id/btnStartTimer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Start"
+                android:backgroundTint="#4CAF50"
+                android:textColor="#FFF"
+                android:textAllCaps="false"
+                android:layout_marginEnd="8dp"/>
+
+            <Button
+                android:id="@+id/btnStopTimer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Stop"
+                android:backgroundTint="#E53935"
+                android:textColor="#FFF"
+                android:textAllCaps="false"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <!-- ================= MAIN CONTENT ================= -->
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="310dp"
+        android:padding="16dp"
+        android:clipToPadding="false">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="40dp"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="12dp">
+
+                <FrameLayout
+                    android:layout_width="0dp"
+                    android:layout_height="110dp"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="8dp">
+                    <include layout="@layout/card_stat_blue"/>
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="0dp"
+                    android:layout_height="110dp"
+                    android:layout_weight="1"
+                    android:layout_marginStart="8dp">
+                    <include layout="@layout/card_stat_purple"/>
+                </FrameLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="20dp">
+
+                <FrameLayout
+                    android:layout_width="0dp"
+                    android:layout_height="110dp"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="8dp">
+                    <include layout="@layout/card_stat_orange"/>
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="0dp"
+                    android:layout_height="110dp"
+                    android:layout_weight="1"
+                    android:layout_marginStart="8dp">
+                    <include layout="@layout/card_stat_green"/>
+                </FrameLayout>
+            </LinearLayout>
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Quick Actions"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:textColor="#2B4CFF"
+                android:layout_marginBottom="12dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/cardCreate"
+                android:layout_marginBottom="10dp">
+                <include layout="@layout/item_quick_action"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/cardViewClubs"
+                android:layout_marginBottom="10dp">
+                <include layout="@layout/item_quick_action"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/cardDeclared"
+                android:layout_marginBottom="10dp">
+                <include layout="@layout/item_quick_action"/>
+            </LinearLayout>
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Recent Activity"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:layout_marginTop="18dp"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvRecentActivity"
+                android:layout_width="match_parent"
+                android:layout_height="230dp"
+                android:padding="8dp"
+                android:background="@drawable/recycler_background"/>
+
+            <Button
+                android:id="@+id/btnReset"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="Reset All Sections"
+                android:textColor="#FFF"
+                android:textStyle="bold"
+                android:textAllCaps="false"
+                android:backgroundTint="#2B4CFF"
+                android:layout_marginTop="26dp"
+                android:elevation="6dp"/>
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

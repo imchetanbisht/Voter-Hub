@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:padding="12dp"
+    android:layout_marginBottom="12dp"
+    android:background="@drawable/candidate_row_bg"
+    android:elevation="6dp">
+
+    <!-- Profile Image -->
+    <ImageView
+        android:id="@+id/imgCandidate"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:scaleType="centerCrop"
+        android:background="@drawable/round_image_bg" />
+
+    <!-- Trophy Icon -->
+    <ImageView
+        android:id="@+id/imgTrophy"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/trophy"
+        android:visibility="gone" />
+
+    <!-- Candidate Name -->
+    <TextView
+        android:id="@+id/tvCandidateName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/imgCandidate"
+        android:layout_marginLeft="14dp"
+        android:text="Candidate Name"
+        android:textSize="18sp"
+        android:textColor="#222"
+        android:textStyle="bold" />
+
+    <!-- Votes -->
+    <TextView
+        android:id="@+id/tvVotes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvCandidateName"
+        android:layout_toRightOf="@id/imgCandidate"
+        android:layout_marginLeft="14dp"
+        android:layout_marginTop="4dp"
+        android:text="Votes: 0"
+        android:textSize="15sp"
+        android:textColor="#666" />
+
+    <!-- Background Bar (full width) -->
+    <View
+        android:id="@+id/voteBarBg"
+        android:layout_width="match_parent"
+        android:layout_height="8dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/vote_bar_gray" />
+
+    <!-- Animated Vote Bar -->
+    <View
+        android:id="@+id/voteBar"
+        android:layout_width="0dp"
+        android:layout_height="8dp"
+        android:layout_alignBottom="@id/voteBarBg"
+        android:layout_alignStart="@id/voteBarBg"
+        android:background="@drawable/vote_bar_green" />
+
+</RelativeLayout>

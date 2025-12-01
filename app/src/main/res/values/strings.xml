@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">VoterHub</string>
+    <string name="hi_admin">Hi, Admin </string>
+    <string name="sign_out">Sign Out</string>
+    <string name="set_time">Set Time</string>
+    <string name="start">Start</string>
+    <string name="stop">Stop</string>
+    <string name="quick_actions">Event Actions </string>
+    <string name="recent_activity">Recent Activity </string>
+    <string name="reset_all_sections">Reset All Sections</string>
+
+</resources>
